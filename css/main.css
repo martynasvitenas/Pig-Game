@@ -109,7 +109,7 @@ img {
     margin: 00px -65px -100px ;
     border-radius: 15px;
     overflow: hidden;
-    transition-duration: 1000ms;
+    transition: opacity .25s ease-in-out;
 }
 
 .active {
@@ -118,4 +118,15 @@ img {
 
 .dis {
     display: none;
+}
+
+.winScore {
+    position: absolute;
+    left: 50%;
+    top: 500px;
+    transform: translate(-50%);
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
 }

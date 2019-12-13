@@ -54,8 +54,16 @@ function addScore(){
     globalScore[activePlayer] += currentScore;
     document.querySelector('.gscore-' + activePlayer).textContent = globalScore[activePlayer];
     //anouncint the winner.
+    var input = document.querySelector('.winScore').value ;
+    
+    if (input){
+        winScore = input;
+    }
+    else { winScore = 100}
+    
+    console.log(winScore);
 
-    if (globalScore[activePlayer] >= 100) {
+    if (globalScore[activePlayer] >= winScore) {
         console.log('winner!');
      document.querySelector('.p' + activePlayer + '-title').textContent = 'Winner!!!';
      document.querySelector('.roll').classList.add('dis');
